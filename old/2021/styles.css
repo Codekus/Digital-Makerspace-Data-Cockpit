@@ -1,0 +1,193 @@
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+#user-dropdown {
+  text-align: right;
+}
+
+#user-dropdown #username {
+  padding-right: 0.5em;
+}
+
+#user-dropdown button {
+  display: inline-flex;
+  align-items: center;
+}
+
+#user-dropdown .dropdown-menu {
+  left: unset;
+  right: 0;
+  min-width: unset;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+}
+
+.portrait {
+  margin-right: 1.5rem;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+}
+
+.btn-xs {
+  padding: .25rem;
+  font-size: .875rem;
+  line-height: .78;
+  position: relative;
+  bottom: 2px;
+}
+
+.categories .card {
+  width: 300px;
+}
+
+.categories .card:not(.disabled) {
+  cursor: pointer;
+}
+
+.categories a.card, a.card:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.categories .card img {
+  height: 200px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.categories .card:hover {
+  border-color: black;
+}
+
+.bg-app {
+  background-color: rgba(40,167,69,0.125);
+}
+
+.bg-tool {
+  background-color: rgba(0,123,255,0.125);
+}
+
+.bg-developer {
+  background-color: rgba(255,193,7,0.125);
+}
+
+.bg-features {
+  background-color: rgba(23,162,184,0.125);
+}
+
+ul#search_results {
+  margin-bottom: 0;
+}
+
+ul .media img {
+  width: 80px;
+}
+
+ul#search_results li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+ul#search_results li:hover {
+  background-color: rgba(0,0,0,0.125);
+}
+
+a.link-unstyled,
+a.link-unstyled:visited,
+a.link-unstyled:hover,
+a.link-unstyled:active,
+a.link-unstyled:focus,
+a.link-unstyled:active {
+  font-style: inherit;
+  color: inherit;
+  background-color: transparent;
+  font-size: inherit;
+  text-decoration: none;
+  font-variant: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  border-radius: inherit;
+  border: inherit;
+  outline: inherit;
+  box-shadow: inherit;
+  padding: inherit;
+  vertical-align: inherit;
+}
+
+#app-view .text-muted {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.spinner {
+  height: 150px;
+}
+
+#trailer nav .btn {
+  margin: 0 0.5em;
+}
+
+#handover article #qr_code img {
+  height: 145px;
+  width: 145px;
+}
+
+#qr_code img {
+  height: 145px;
+  width: 145px;
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+  cursor: move;
+}
+
+.modal-footer {
+  background-color: #f8f9fa;
+}
+
+#tabs.show + article {
+  border-top-color: white !important;
+}
+
+#tabs a {
+  min-height: 20px;
+}
+
+#save-app ul {
+  margin-bottom: 1rem;
+}
+
+#publish label {
+  font-weight: bold;
+}
+
+#publish input + label {
+  font-weight: normal;
+}
+
+#department {
+  line-height: 15px;
+}
+
+.fadeout {
+  transition: opacity 5s;
+  opacity: 0;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.table {
+  margin-bottom: 0;
+}
