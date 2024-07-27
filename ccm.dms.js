@@ -14,7 +14,9 @@
   const component = {
     name: 'dms',
     ccm: 'https://ccmjs.github.io/ccm/versions/ccm-27.3.1.min.js',
+    version: [ 5, 2, 0 ],
     config: {
+      dataCockpit: [ "ccm.start", "https://codekus.github.io/ccm-data-cockpit/ccm.data_cockpit.js"],
       "apps": [ "ccm.store" ],
       "comment": [ "ccm.component", "https://ccmjs.github.io/tkless-components/comment/versions/ccm.comment-7.2.0.min.js" ],
       "css": [ "ccm.load",
@@ -31,7 +33,7 @@
       "icon": "https://ccmjs.github.io/digital-makerspace/resources/img/icon.png",
 //    "handover": [ "ccm.component", "https://ccmjs.github.io/akless-components/handover_app/versions/ccm.handover_app-3.0.0.min.js" ],
       "helper": [ "ccm.load", "https://ccmjs.github.io/digital-makerspace/libs/ccm/helper.mjs" ],
-      "html": [ "ccm.load", "https://ccmjs.github.io/digital-makerspace/resources/templates.mjs" ],
+      "html": [ "ccm.load", "./resources/templates.mjs" ],
 //    "lang": [ "ccm.start", "https://ccmjs.github.io/akless-components/lang/versions/ccm.lang-1.1.0.min.js" ],
       "libs": [ "ccm.load", "https://ccmjs.github.io/digital-makerspace/libs/bootstrap-5/js/bootstrap.bundle.min.js" ],
 //    "logger": [ "ccm.instance", "https://ccmjs.github.io/akless-components/log/versions/ccm.log-5.0.1.min.js", [ "ccm.get", "https://ccmjs.github.io/akless-components/log/resources/configs.min.js", "greedy" ] ],
@@ -491,6 +493,12 @@
         if ( params.show ) return this.render.show( params.show );
         this.render.home();
       };
+      this.debug = async () => {
+     //   await this.element.querySelector("main").appendChild(this.dataCockpit.root);
+        const mainElement = this.element.querySelector("main");
+        mainElement.innerHTML = ''; // Clear existing content
+        mainElement.appendChild(this.dataCockpit.root);
+      }
 
       /**
        * contains all render functions

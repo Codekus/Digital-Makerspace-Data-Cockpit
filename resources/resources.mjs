@@ -848,6 +848,7 @@ export const demo = {
  * @type {Object}
  */
 export const live = {
+  "html": [ "ccm.load", "./resources/templates.mjs" ],
   "apps": [ "ccm.store", { "url": "https://ccm2.inf.h-brs.de", "name": "dms2-apps" } ],
   "comment": [ "ccm.component", "https://ccmjs.github.io/tkless-components/comment/versions/ccm.comment-7.2.0.min.js", {
     "data": { "store": [ "ccm.store", { "url": "https://ccm2.inf.h-brs.de", "name": "dms2-comments" } ] },
