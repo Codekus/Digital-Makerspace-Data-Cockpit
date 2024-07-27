@@ -154,11 +154,7 @@ export function header( active ) {
               </button>
             </li>
             <li ?data-hidden=${ !user }><button disabled class="dropdown-item" type="button" data-lang="btn_profile">${ dms.text.btn_profile }</button></li>
-            <li @click=${async () => {
-                debugger
-                await dms.debug()
-              //  await ccm.start('https://codekus.github.io/ccm-data-cockpit/ccm.data_cockpit.js', {}, document.body);
-            }} ?data-hidden=${ !user }><button class="dropdown-item" type="button" data-lang="btn_data">${ dms.text.btn_data }</button></li>
+            <li @click=${ dms.events.onMyData } ?data-hidden=${ !user }><button class="dropdown-item" type="button" data-lang="btn_data">${ dms.text.btn_data }</button></li>
             <li ?data-hidden=${ !user }>
               <button disabled class="dropdown-item d-flex align-items-center" type="button">
                 <span data-lang="btn_bookmarks">${ dms.text.btn_bookmarks }</span>

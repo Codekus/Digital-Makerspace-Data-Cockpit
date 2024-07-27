@@ -256,6 +256,10 @@
        * @type {Object.<string,Function>}
        */
       this.events = {
+        onMyData: async () => {
+          $.params( { view: 'my-data' }, true, true );
+          await this.refresh()
+        },
         onRegister: async () => {
           $.params( { view: 'register' }, true, true );
           await this.refresh();
@@ -487,24 +491,24 @@
             return this.render.item( params.view, params.id );
           case 'register':
             return this.render.register();
+          case 'my-data':
+            return this.render.myData();
         }
         if ( params.edit ) return this.render.edit( params.edit, params.id );
         if ( params.editor ) return this.render.editor( params.editor, params.template );
         if ( params.show ) return this.render.show( params.show );
         this.render.home();
       };
-      this.debug = async () => {
-     //   await this.element.querySelector("main").appendChild(this.dataCockpit.root);
-        const mainElement = this.element.querySelector("main");
-        mainElement.innerHTML = ''; // Clear existing content
-        mainElement.appendChild(this.dataCockpit.root);
-      }
 
       /**
        * contains all render functions
        * @type {Object.<string,Function>}
        */
       this.render = {
+        myData: () => {
+          $.replace( element, element = element.cloneNode() );
+          element.appendChild(this.dataCockpit.root);
+        },
         header: active => this.html.render( this.html.header( active ), this.element.querySelector( 'header' ) ),
         home: () => {
           this.render.header();
